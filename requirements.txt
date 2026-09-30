@@ -1,0 +1,2 @@
+requests>=2.31
+apache-airflow-providers-snowflake>=6.0

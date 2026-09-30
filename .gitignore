@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.env
+.venv/
+venv/
+keys/
+airflow.db
+airflow.cfg
+logs/
+*.log
+*.pem
+*.key
+.DS_Store

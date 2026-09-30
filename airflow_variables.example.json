@@ -1,0 +1,20 @@
+{
+  "OPEN_METEO_BASE_URL": "https://api.open-meteo.com/v1/forecast",
+  "WEATHER_CITIES": [
+    {
+      "city": "Seattle",
+      "latitude": 47.6062,
+      "longitude": -122.3321
+    },
+    {
+      "city": "Phoenix",
+      "latitude": 33.4484,
+      "longitude": -112.074
+    }
+  ],
+  "OPEN_METEO_PAST_DAYS": "14",
+  "OPEN_METEO_FORECAST_DAYS": "7",
+  "SNOWFLAKE_CONN_ID": "snowflake_weather",
+  "TRIGGER_DBT": "false",
+  "DBT_DAG_ID": "weather_dbt_dag"
+}
