@@ -11,7 +11,7 @@ Open-Meteo API
 
 ## Team boundary
 
-### Member A
+### Member A - Xinghan Chen
 - Open-Meteo extraction for two cities
 - Airflow ETL DAG
 - Airflow Connections and Variables
@@ -22,7 +22,7 @@ Open-Meteo API
 - Airflow screenshots
 - ETL/database/report sections
 
-### Member B
+### Member B - Abhijith Reddy
 - dbt project/models/tests/snapshot
 - Analytical weather metrics
 - dbt Airflow DAG
