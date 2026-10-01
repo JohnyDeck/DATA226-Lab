@@ -73,11 +73,13 @@ services:
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
       AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+      SNOWFLAKE_PRIVATE_KEY_PATH: /opt/airflow/keys/abhi_dbt_rsa_key.pem
       _PIP_ADDITIONAL_REQUIREMENTS: >-
         apache-airflow-providers-snowflake
         requests
     volumes:
       - ./dags:/opt/airflow/dags
+      - ./dbt:/opt/airflow/dbt:ro
       - ./logs:/opt/airflow/logs
       - ./plugins:/opt/airflow/plugins
       - ./keys:/opt/airflow/keys:ro

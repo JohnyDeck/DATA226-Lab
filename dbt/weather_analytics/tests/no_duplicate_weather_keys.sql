@@ -1,0 +1,7 @@
+SELECT
+    CITY,
+    WEATHER_TIME,
+    COUNT(*) AS DUPLICATE_COUNT
+FROM {{ ref('stg_raw_weather') }}
+GROUP BY CITY, WEATHER_TIME
+HAVING COUNT(*) > 1

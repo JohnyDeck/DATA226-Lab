@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: stg_raw_weather
+    description: "Cleaned hourly weather records."
+
+    columns:
+      - name: CITY
+        tests:
+          - not_null
+
+      - name: WEATHER_TIME
+        tests:
+          - not_null
+
+      - name: WEATHER_DATE
+        tests:
+          - not_null
+
+      - name: TEMPERATURE_C
+        tests:
+          - not_null
+
+      - name: RAIN_MM
+        tests:
+          - not_null

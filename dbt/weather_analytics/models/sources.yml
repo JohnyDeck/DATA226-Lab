@@ -1,0 +1,23 @@
+version: 2
+
+sources:
+  - name: raw
+    database: WEATHER_ANALYTICS
+    schema: RAW
+
+    tables:
+      - name: RAW_WEATHER
+        description: "Weather data loaded by the Airflow ETL pipeline."
+
+        columns:
+          - name: CITY
+            tests:
+              - not_null
+
+          - name: WEATHER_TIME
+            tests:
+              - not_null
+
+          - name: TEMPERATURE_C
+            tests:
+              - not_null

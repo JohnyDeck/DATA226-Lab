@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: fct_weather_daily
+    description: "Daily weather aggregates for each city."
+
+    columns:
+      - name: CITY
+        tests:
+          - not_null
+
+      - name: WEATHER_DATE
+        tests:
+          - not_null
+
+      - name: HOURLY_OBSERVATIONS
+        tests:
+          - not_null
+
+  - name: mart_weather_metrics
+    description: "Weather metrics used by the BI dashboard."
+
+    columns:
+      - name: CITY
+        tests:
+          - not_null
+
+      - name: WEATHER_DATE
+        tests:
+          - not_null
+
+      - name: TEMPERATURE_7_DAY_MOVING_AVG_C
+        tests:
+          - not_null
+
+      - name: RAINFALL_7_DAY_ROLLING_MM
+        tests:
+          - not_null

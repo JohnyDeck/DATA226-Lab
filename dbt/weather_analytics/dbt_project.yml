@@ -1,0 +1,24 @@
+name: weather_analytics
+version: "1.0.0"
+config-version: 2
+
+profile: weather_analytics
+
+model-paths: ["models"]
+snapshot-paths: ["snapshots"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+
+models:
+  weather_analytics:
+    staging:
+      +materialized: view
+
+    marts:
+      +materialized: table
+
+snapshots:
+  weather_analytics:
+    +target_schema: DBT_DEV
+    +strategy: timestamp
+    +updated_at: LOADED_AT

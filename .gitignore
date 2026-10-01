@@ -11,3 +11,7 @@ logs/
 *.pem
 *.key
 .DS_Store
+dbt/weather_analytics/profiles.yml
+dbt/weather_analytics/target/
+dbt/weather_analytics/.user.yml
+bi/.~*
