@@ -486,16 +486,18 @@ The complete workflow is now implemented from weather-data extraction through tr
 
 The final end-to-end workflow is completed:
 
+```text
 Open-Meteo API
-    ↓
+      ↓
 weather_etl_dag
-    ↓
+      ↓
 RAW_WEATHER
-    ↓
+      ↓
 weather_dbt_dag
-    ↓
+      ↓
 dbt transformations
-    ↓
+      ↓
 analytics tables
-    ↓
+      ↓
 Tableau BI dashboard
+```
